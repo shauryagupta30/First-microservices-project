@@ -1,0 +1,2 @@
+The react application isgoing to interact with post service and comment service via network request
+The post service and comment service 
