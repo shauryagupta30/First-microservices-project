@@ -1,11 +1,12 @@
-import React from 'react';
-import PostCreate from './postcreate'
-export default ()=>{
+import React from "react";
+import PostCreate from "./postcreate";
 
-    return (
-    <div className = "container">
-        <h1>Create Post</h1>
-        <PostCreate />
+const App = () => {
+  return (
+    <div className="container">
+      <h1>Create Post</h1>
+      <PostCreate />
     </div>
-    );
+  );
 };
+export default App;
