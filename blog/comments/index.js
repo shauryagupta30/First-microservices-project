@@ -4,18 +4,16 @@ const {randomBytes} = require('crypto');
 const app = express();
 app.use(bodyParser.json());
 
-
 //storage
 const commentsByPostId = {};
 
 //route handler
 app.get('/posts/:id/comments',(req,res)=>{
     res.send(commentsByPostId[req.params.id] || []);
-    
 });
 
 app.post('/posts/:id/comments',(req,res)=>{
-//creation of acomment
+//creation of a comment
     const commentId = randomBytes(4).toString('hex');
     //incoming post id
     const {content}  = req.body;
