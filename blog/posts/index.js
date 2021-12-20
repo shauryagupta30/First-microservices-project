@@ -1,15 +1,18 @@
 //get access to express
 //setup 2 different route handlers
+const cors = require('cors');
 const express = require('express');
 const {randomBytes} = require('crypto');
 const bodyParser = require('body-parser');
 const app = express();
 app.use(bodyParser.json());
+app.use(cors()); //use this as a middleware
 //////////////////////////
 //object incharge to store the data generated (We use no DB for this toy app)
 //We save data/info 
 
 const posts = {}; //repository
+//send back the entire object when someone tries to request all the data
 
 
 ////////////////////////////
@@ -41,9 +44,6 @@ res.status(201).send(posts[id]);
 app.listen(4000,()=>{
     console.log('Listening on 4000');
 });
-
-
 /*
 We need to uniquely identify the posts
-
 */ 
