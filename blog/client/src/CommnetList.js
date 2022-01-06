@@ -28,20 +28,7 @@ const CommentList = ({ postId }) => {
 
   return <ul>{renderedComments}</ul>;
 };
-
 export default CommentList;
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
