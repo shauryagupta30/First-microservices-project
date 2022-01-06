@@ -1,5 +1,4 @@
 /*import React from 'react';
-
 //Recieve {postId} as a property
 const CommentList = ({ postId }) => {
     //piece of state
@@ -29,9 +28,6 @@ const CommentList = ({ postId }) => {
   return <ul>{renderedComments}</ul>;
 };
 export default CommentList;
-
-
-
 */
 
 import React from "react";
