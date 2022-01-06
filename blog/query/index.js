@@ -78,12 +78,21 @@ app.post('/events', (req, res) => {
 
     posts[id] = { id, title, comments: [] };
   }
-
+//syncing the creaton of coment at query
   if (type === 'CommentCreated') {
     const { id, content, postId } = data;
 
     const post = posts[postId];
     post.comments.push({ id, content });
+  }
+  //updating the comment after moderation changes from comment srvice
+  if(type === 'CommentUpdated'){
+    const {id,content,postId,status} = data;
+    const comment = post.comment.find(comment => {
+      return comment.id == id;
+    });
+    comment.status = status;
+    comment.content = content;
   }
 
   console.log(posts);

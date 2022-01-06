@@ -33,6 +33,32 @@ app.post('/posts/:id/comments', async (req,res)=>{
     res.status(201).send(comments);
 });
 
+//coment updation at comment service side
+
+app.post('/events',async (req,res)=>{
+  console.log('Event Recieved: ',req.body.type);
+  const {type,data} = req.body;
+  if(type==='CommentModerated')
+  {
+    const {postId,status} = data;
+    const comment = comments.find(comment=>{
+      return comment.id;
+    });
+    comment.status = status;
+    //sending the event to the event bus
+    await axios.post('http://localhost:4005',{
+      type: 'CommentUpdated',
+      data: {
+        id,
+        status,
+        postId,
+        content
+      }
+    })
+  }
+
+});
+
 app.post('/events',(req,res)=>{
     console.log('recevied Event',req.body.type);
 
