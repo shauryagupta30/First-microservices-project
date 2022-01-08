@@ -1,6 +1,13 @@
-# First-microservices-project
+
 Microservices with NodeJs and React 
-Project description and demo remaining + code commenting
+
+Services: 
+1)Client (Frontend react app)
+2)Posts service
+3)Comments service
+4)Event Bus service
+5)Query service
+6)Comment Moderation service : Black listed word: "orange"
 
 
 
@@ -8,4 +15,8 @@ https://user-images.githubusercontent.com/41203937/148657752-bfde8cf7-e78a-4f86-
 
 
 
+#Event Synchronization Demo
+
+
+https://user-images.githubusercontent.com/41203937/148658075-33a3b0de-91fe-47e0-af3a-3eda4bc1ce3d.mp4
 
