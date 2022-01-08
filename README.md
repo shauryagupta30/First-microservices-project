@@ -2,12 +2,12 @@
 Microservices with NodeJs and React 
 
 Services: 
-1)Client (Frontend react app)
-2)Posts service
-3)Comments service
-4)Event Bus service
-5)Query service
-6)Comment Moderation service : Black listed word: "orange"
+* 1)Client (Frontend react app)
+* 2)Posts service
+* 3)Comments service
+* 4)Event Bus service
+* 5)Query service
+* 6)Comment Moderation service : Black listed word: "orange"
 
 
 
